@@ -7,7 +7,10 @@ from api import app
 books = [
     {'id': 0, 'title':'Python Fluente', 'author':'Luciano Ramalho', 'read': False},
     {'id': 1, 'title':'Pense em Python', 'author':'Luciano Ramalho', 'read': True},
-    {'id': 2, 'title':'Flask Web Framework', 'author':'Luciano Ramalho', 'read': False}
+    {'id': 2, 'title':'Flask Web Framework', 'author':'Luciano Ramalho', 'read': True},
+    {'id': 3, 'title':'Python3', 'author':'Luciano Ramalho', 'read': False},
+    {'id': 4, 'title':'Flask', 'author':'Kelsiane', 'read': True},
+    {'id': 5, 'title':'Flask Web Framework', 'author':'Luiz', 'read': False}
 ]
 
 
