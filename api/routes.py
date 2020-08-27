@@ -34,6 +34,19 @@ def delete_book(book_id):
     books.pop(book_id)
     return jsonify({"ok":"apagado com sucesso"}), 201
 
+@app.route('/api/books/<int:book_id>', methods=['PUT'])
+def update_book(book_id):
+        data = request.get_json(book_id)
+        title  = data['title']
+        author  = data['author']
+        read = data['read']
+        status=False
+        if read==False:
+             status=False
+        else:
+            status=True
+        
+        return jsonify({'title': title, 'author': author, 'read':status,"modificado":"modificado com sucesso"}),201
 
 @app.route("/api/books", methods=['POST'])
 def create_book():
@@ -42,4 +55,11 @@ def create_book():
         id = data['id']
         title = data['title']
         author = data['author']
-        return jsonify({'id':id,'title':title, 'author':author }),201
+        read = data['read']
+        status=False
+        if read==False:
+             status=False
+        else:
+            status=True
+        
+        return jsonify({'id':id,'title':title, 'read':status,'author':author,'ok':'Criado com sucesso'}),201
